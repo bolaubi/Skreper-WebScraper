@@ -35,7 +35,7 @@ Skreper is a web-based scraping application that focuses on Indonesia ecommerce 
 - Ecommerce websites are prone to changes, please notify me if Skreper is not working, you can reach me out on [discord](https://discordapp.com/users/525654231940857867)
 - replace the data/ credential of the yaml file with your own data.
 - Template for Skreper can be found on [Bootstrapious](https://bootstrapious.com/)
-- Skreper is not running asynchronously/ concurrently, if somebody is willing to help me improve this application, please kindly reach me out on [discord](https://discordapp.com/users/525654231940857867), I am looking for someone who has the knowledge of Flask, Celery, Rabbit MQ, Redis, RQ, and Heroku. 
+- Skreper is not running asynchronously/ concurrently, if somebody is willing to help me improve this application, please kindly reach me out on [discord](https://discordapp.com/users/525654231940857867), I am looking for someone who has the knowledge/ experience of Flask, Celery, Rabbit MQ, Redis, RQ, and Heroku. 
 
 ## Skreper - websites
 

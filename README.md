@@ -41,73 +41,73 @@ Skreper is a web-based scraping application that focuses on Indonesia ecommerce 
 
 >  Landing page
 
-![01-landingPage](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\01-landingPage.JPG)
+![01-landingPage](pic/01-landingPage.JPG)
 
 <br><br>
 
 > Login page
 
-![02-loginPage](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\02-loginPage.JPG)
+![02-loginPage](pic/02-loginPage.JPG)
 
 <br><br>
 
 >  Register page
 
-![03-registerPage](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\03-registerPage.JPG)
+![03-registerPage](pic/03-registerPage.JPG)
 
 <br><br>
 
 > Logged in page
 
-![04-loggedInPage](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\04-loggedInPage.JPG)
+![04-loggedInPage](pic/04-loggedInPage.JPG)
 
 <br><br>
 
 > Scraping Tokopedia page
 
-![05-scrappingTokopedia](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\05-scrappingTokopedia.JPG)
+![05-scrappingTokopedia](pic/05-scrappingTokopedia.JPG)
 
 <br><br>
 
 > Scrapped Tokopedia page
 
-![06-scrappedTokopedia](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\06-scrappedTokopedia.JPG)
+![06-scrappedTokopedia](pic/06-scrappedTokopedia.JPG)
 
 <br><br>
 
 > Scrapping Nike Indonesia page
 
-![07a-scrappingNike](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\07a-scrappingNike.JPG)
+![07a-scrappingNike](pic/07a-scrappingNike.JPG)
 
 <br><br>
 
 > Scrapping Nike Sales Indonesia page
 
-![07b-ScrappingNikeSales](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\07b-ScrappingNikeSales.JPG)
+![07b-ScrappingNikeSales](pic/07b-ScrappingNikeSales.JPG)
 
 <br><br>
 
 > Scrapped Nike Sales Indonesia page
 
-![08-scrappedNikeSales](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\08-scrappedNikeSales.JPG)
+![08-scrappedNikeSales](pic/08-scrappedNikeSales.JPG)
 
 <br><br>
 
 > Downloaded Nike Sales Indonesia page
 
-![09-downloadedNikeSales](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\09-downloadedNikeSales.JPG)
+![09-downloadedNikeSales](pic/09-downloadedNikeSales.JPG)
 
 <br><br>
 
 > Sent email Tokopedia page
 
-![10-sentEmailTokopedia](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\10-sentEmailTokopedia.JPG)
+![10-sentEmailTokopedia](pic/10-sentEmailTokopedia.JPG)
 
 <br><br>
 
 > Logged out page
 
-![11-loggedOut](C:\Users\benedict\PycharmProjects\github_benedictlaiman\github_skreper\pic\11-loggedOut.JPG)
+![11-loggedOut](pic/11-loggedOut.JPG)
 
 <br><br>
 
@@ -117,5 +117,4 @@ Get in touch with me through:
 
 - [Linkedin](https://www.linkedin.com/in/benedict-laiman-60401319a/)
 - [Discord](https://discordapp.com/users/525654231940857867/)
-- [Instagram](https://www.instagram.com/benedictlaiman/)
-- [Issuu](https://issuu.com/benedictlaiman/)
+

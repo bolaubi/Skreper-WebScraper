@@ -1,0 +1,29 @@
+
+/*
+=========================================
+=========================================
+
+   Multi - Multipurpose Bootstrap theme by Bootstrapious.com
+
+=========================================
+========================================= */
+
+
+// functions.scss - Bootstrap functions
+@import "modules/functions";
+// variables-custom.scss - to change colour variant, rounded corners, etc.
+@import "modules/variables";
+// bootstrap mixins
+@import "modules/mixins";
+// custom mixins
+@import "modules/mixins-custom";
+// general styling
+@import "modules/general";
+
+// 3rd party scripts override
+@import "modules/3rd-party";
+// demo styling
+@import "modules/demo";
+
+// bootstrap base stylesheet overrides
+@import "theme";

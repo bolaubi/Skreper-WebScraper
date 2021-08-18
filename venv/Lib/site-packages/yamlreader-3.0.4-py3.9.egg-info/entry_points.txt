@@ -1,0 +1,3 @@
+[console_scripts]
+yamlreader = yamlreader.yamlreader:__main
+

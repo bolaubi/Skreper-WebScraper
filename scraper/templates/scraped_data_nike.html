@@ -1,0 +1,44 @@
+{% extends 'nike.html' %}
+
+{% block scraped_data_nike %}
+
+<div class="card mb-4">
+        {{ table|safe }}
+
+        <form action="/nike/download-scraped-data-nike/{{ current_user.username }}" method="post">
+            <button class="btn btn-outline-primary nav-btn btn-sm btn-block" name="nike_csv_download" value="{{ now_timestamp }}"
+                    type="submit">
+                <i class="fas fa-download mr-2"></i>Download the CSV
+            </button>
+        </form>
+        <form action="/nike/email-scraped-data-nike/{{ current_user.username }}" method="post">
+            <button class="btn btn-outline-primary nav-btn btn-sm btn-block" name="nike_csv_email" value="{{ now_timestamp }}"
+                    type="submit">
+                <i class="fas fa-paper-plane mr-2"></i>Email the CSV
+            </button>
+        </form>
+
+</div>
+
+{% endblock scraped_data_nike %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

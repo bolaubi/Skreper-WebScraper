@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="jumbotron" id="jumbotron-home">
+        <h1>Web Scraping</h1>
+        <p>is data scraping used for extracting data from websites.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Web_scraping" class="btn btn-primary btn-large" target="_blank">Learn more »</a>
+    </div>
+    <div id="forms" class="card mb-4">
+        <div class="card-body">
+            <form>
+
+                <fieldset>
+                    {% if current_user.is_authenticated %}
+                    <legend>Hello, {{ current_user.username }}!</legend>
+                    {% else %}
+                    <legend>Hi there!</legend>
+                    {% endif %}
+                    <div class="form-group">
+                        Skreper is a web scraping application developed by Bolaubi. The goal of this project is to
+                        scrape numerous e-commerce websites for educational purposes only. Visit <a href="https://github.com/bolaubi" target="_blank">Bolaubi Github</a> page for
+                        more projects.
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock content %}

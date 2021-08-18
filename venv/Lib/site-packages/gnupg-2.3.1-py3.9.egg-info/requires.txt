@@ -1,0 +1,5 @@
+psutil>=1.2.1
+
+[docs]
+Sphinx>=1.1
+sphinxcontrib-fulltoc==1.0

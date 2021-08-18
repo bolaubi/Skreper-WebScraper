@@ -1,0 +1,45 @@
+{% extends 'tokopedia.html' %}
+
+{% block scraped_data_tokopedia %}
+
+<div class="card mb-4">
+    {{ table|safe }}
+    <form action="/tokopedia/download-scraped-data-tokopedia/{{ current_user.username }}" method="post">
+        <button class="btn btn-outline-primary nav-btn btn-sm btn-block" name="tokopedia_csv_download"
+                value="{{ now_timestamp }}"
+                type="submit">
+            <i class="fas fa-download mr-2"></i>Download the CSV
+        </button>
+    </form>
+    <form action="/tokopedia/email-scraped-data-tokopedia/{{ current_user.username }}" method="post">
+        <button class="btn btn-outline-primary nav-btn btn-sm btn-block" name="tokopedia_csv_email"
+                value="{{ now_timestamp }}"
+                type="submit">
+            <i class="fas fa-paper-plane mr-2"></i>Email the CSV
+        </button>
+    </form>
+
+</div>
+
+{% endblock scraped_data_tokopedia %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

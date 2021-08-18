@@ -1,0 +1,5 @@
+mysql_host: 'yourLocalhost:yourPort'
+mysql_user: 'yourMysqlUser'
+mysql_password: 'yourMysqlPass'
+mysql_db: 'youDataBaseName'
+secret_key: 'yourSecretKey'

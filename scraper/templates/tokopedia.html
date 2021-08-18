@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container py-5 bg-cover bg-center">
+    <div id="forms" class="card mb-4">
+        <div class="card-body"  id="nikePage">
+            <form action="{{ url_for('scraped_data_tokopedia') }}" method="post" class="form-inline">
+
+                <fieldset>
+                    <legend>Tokopedia Page</legend>
+                    <div class="form-group">
+                        <p>Please paste the "<a href="https://www.tokopedia.com/" target="_blank">Tokopedia</a> Page
+                            Link" (e.g.
+                            <a href="https://www.tokopedia.com/search?st=product&q=apel&navsource=home">https://www.tokopedia.com/search?st=product&q=apel&navsource=home</a>) . Please note that web scraping the page
+                            of Tokopedia may take up to <i>"15 minutes"  </i> to complete, so sit back and enjoy your coffee or tea
+                            while you wait for the process to finish.
+                        </p>
+                    </div>
+                </fieldset>
+                <input list="tokopediaLinks" id="tokopediaPageId" name="tokopediaPage" class="form-control form-control-md" placeholder="https://www.tokopedia.com/search?st=product&q=MONYET&navsource=home" required>
+                <datalist id="tokopediaLinks">
+                    <option value="https://www.tokopedia.com/search?st=product&q=masker%20kn95&navsource=home">masker kn95</option>
+                    <option value="https://www.tokopedia.com/search?st=product&q=faceshield&navsource=home">faceshield</option>
+                    <option value="https://www.tokopedia.com/search?st=product&q=gateron%20switch&navsource=home">gateron switch</option>
+                    <option value="https://www.tokopedia.com/search?st=product&q=indomie&navsource=home">indomie</option>
+                    <option value="https://www.tokopedia.com/search?st=product&q=keripik&navsource=home">keripik</option>
+                    <option value="https://www.tokopedia.com/search?st=product&q=mainan&navsource=home">mainan</option>
+                </datalist>
+                <button class="btn btn-outline-primary nav-btn btn-sm"><i
+                        class="fas fa-poo-storm mr-2"></i>Scrape Now!</button>
+            </form>
+        </div>
+    </div>
+
+        {% block scraped_data_tokopedia %}
+
+        {% endblock scraped_data_tokopedia %}
+
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

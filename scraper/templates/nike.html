@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="container py-5 bg-cover bg-center">
+    <div id="forms" class="card mb-4">
+        <div class="card-body"  id="nikePage">
+            <form action="{{ url_for('scraped_data_nike') }}" method="post" class="form-inline">
+
+                <fieldset>
+                    <legend>Nike Page</legend>
+                    <div class="form-group">
+                        <p>Please paste the "<a href="https://www.nike.com/id/" target="_blank">Nike</a> Page Link" or select the link from the drop-down menu in which you want to
+                        scrape the data out of. Please note that web scraping could take a while, so sit back and
+                        enjoy your coffee or tea while you wait for the process to finish.
+                        </p>
+                    </div>
+                </fieldset>
+                <input list="nikeLinks" id="nikePageId" name="nikePage" class="form-control form-control-md" placeholder="https://www.nike.com/id/w/womens-shoes-5e1x6zy7ok" required>
+                <datalist id="nikeLinks">
+                    <option value="https://www.nike.com/id/w/new-mens-shoes-3n82yznik1zy7ok">Men's Newest Sneakers</option>
+                    <option value="https://www.nike.com/id/w/mens-shoes-nik1zy7ok">Men's All Shoes</option>
+                    <option value="https://www.nike.com/id/w/mens-lifestyle-shoes-13jrmznik1zy7ok">Men's Lifestyle Shoes</option>
+                    <option value="https://www.nike.com/id/w/womens-shoes-5e1x6zy7ok">Women's All Shoes</option>
+                    <option value="https://www.nike.com/id/w/womens-lifestyle-shoes-13jrmz5e1x6zy7ok">Women's Lifestyle Shoes</option>
+                    <option value="https://www.nike.com/id/w/womens-running-shoes-37v7jz5e1x6zy7ok">Women's Running Shoes</option>
+                </datalist>
+                <button class="btn btn-outline-primary nav-btn btn-sm"><i
+                        class="fas fa-poo-storm mr-2"></i>Scrape Now!</button>
+            </form>
+        </div>
+    </div>
+
+        {% block scraped_data_nike %}
+
+        {% endblock scraped_data_nike %}
+
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

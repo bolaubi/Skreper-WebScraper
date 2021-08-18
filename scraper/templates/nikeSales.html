@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div id="forms" class="card mb-4">
+        <div class="card-body">
+            <form action="{{ url_for('scraped_data_nikeSales') }}" method="POST" class="form-inline">
+
+                <fieldset>
+                    <legend>Nike Sales Page</legend>
+                    <div class="form-group">
+                        <p>Please select the "<a href="https://www.nike.com/id/" target="_blank">Nike</a> Sales Page" link from the drop-down menu in which you want to
+                        scrape the data out of. Please note that web scraping could take a while, so sit back and
+                        enjoy your coffee or tea while you wait for the process to finish.
+                        </p>
+                    </div>
+                </fieldset>
+
+                        <select id="nikeSales-dropdown" name="nikeSales-dropdown" class="form-control form-control-sm">
+                            <option value="https://www.nike.com/id/w/sale-3yaep" selected>All Sale</option>
+                            <option value="https://www.nike.com/id/w/mens-sale-shoes-3yaepznik1zy7ok">Men - Shoes</option>
+                            <option value="https://www.nike.com/id/w/mens-sale-clothing-3yaepz6ymx6znik1">Men - Clothing</option>
+                            <option value="https://www.nike.com/id/w/mens-sale-accessories-equipment-3yaepzawwpwznik1">Men - Accessories and Equipment</option>
+                            <option value="https://www.nike.com/id/w/womens-sale-shoes-3yaepz5e1x6zy7ok">Women - Shoes</option>
+                            <option value="https://www.nike.com/id/w/womens-sale-clothing-3yaepz5e1x6z6ymx6">Women - Clothing</option>
+                            <option value="https://www.nike.com/id/w/womens-sale-accessories-equipment-3yaepz5e1x6zawwpw">Women - Accessories and Equipment</option>
+                            <option value="https://www.nike.com/id/w/kids-sale-shoes-3yaepzv4dhzy7ok">Kids - Shoes</option>
+                            <option value="https://www.nike.com/id/w/kids-sale-clothing-3yaepz6ymx6zv4dh">Kids - Clothing</option>
+                            <option value="https://www.nike.com/id/w/kids-sale-accessories-equipment-3yaepzawwpwzv4dh">Kids - Accessories and Equipment</option>
+                        </select>
+                        <button class="btn btn-outline-primary nav-btn btn-sm"><i class="fas fa-poo-storm mr-2"></i>Scrape Now!</button>
+
+
+            </form>
+        </div>
+    </div>
+
+    {% block scraped_data_nikeSales %}
+
+    {% endblock scraped_data_nikeSales %}
+
+</div>
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

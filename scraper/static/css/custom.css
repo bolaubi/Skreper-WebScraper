@@ -1,0 +1,15 @@
+/* your styles go here */
+
+div#footer-black {
+    margin-top: 30%;
+}
+
+table#nikeSales_table, table#nike_table, table#tokopedia_table {
+    overflow: auto;
+    height: 500px;
+}
+
+div#jumbotron-home {
+    background: url("../img/jumbotron1.jpg");
+}
+

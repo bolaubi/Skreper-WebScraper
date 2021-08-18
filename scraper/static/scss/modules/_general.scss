@@ -1,0 +1,201 @@
+/*
+*
+* ==========================================
+* GENERAL
+* ==========================================
+*
+*/
+
+body {
+    overflow-x: hidden;
+}
+
+.text-small {
+    font-size: 0.9rem !important;
+}
+
+strong {
+    font-weight: $font-weight-bold;
+}
+
+.text-uppercase {
+    letter-spacing: 0.1em;
+}
+
+.text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.bg-center {
+    background-position: center center !important;
+}
+
+.hero-heading {
+    @include media-breakpoint-up(lg) {
+        font-size: 3.7rem !important;
+    }
+}
+
+.breadcrumb {
+    background: none;
+    padding-left: 0;
+    padding-right: 0;
+
+    .breadcrumb-item {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+
+        &.active {
+            color: #333;
+        }
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    & + * {
+        z-index: 2;
+        position: relative;
+    }
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-gray {
+    background: #f7f7f7 !important;
+}
+
+.lined {
+    &::after {
+        content: '';
+        display: block;
+        width: 2.8rem;
+        margin: 0.5rem 0;
+        height: 1px;
+        background: $brand-primary;
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .lined-#{$color} {
+        &::after {
+            background: $value;
+        }
+    }
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid $brand-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $brand-primary;
+    font-size: 2.5rem;
+}
+
+.text-gray {
+    color: #ccc !important;
+}
+
+.text-muted {
+    color: $text-muted !important;
+}
+
+#map {
+    height: 500px;
+}
+
+/*
+*
+* ==========================================
+* NAVBAR
+* ==========================================
+*
+*/
+.navbar-brand {
+    color: $brand-primary;
+    transition: all 0.3s;
+    &:hover, &:focus {
+        color: #000;
+    }
+}
+
+
+.navbar {
+    .nav-link {
+        font-size: 0.9rem;
+        color: #000;
+        border-top: 2px solid transparent;
+        transition: all 0.3s;
+
+        &:hover, &:focus, &.active {
+            color: $brand-primary;
+
+            @include media-breakpoint-up(lg) {
+                border-color: $brand-primary;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        @include media-breakpoint-down(md) {
+            border: none;
+        }
+    }
+}
+
+
+
+/*
+*
+* ==========================================
+* FOOTER
+* ==========================================
+*
+*/
+
+.footer-link {
+    color: $text-muted;
+    &:hover {
+        color: $dark;
+        transition: all 0.3s;
+    }
+}
+
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: $text-muted;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $text-muted;
+    transition: all 0.3s;
+
+    &:hover, &:focus {
+        border-color: $brand-primary;
+        color: $brand-primary;
+        text-decoration: none;
+    }
+}

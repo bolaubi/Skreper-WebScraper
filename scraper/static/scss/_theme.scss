@@ -1,0 +1,783 @@
+/* =========================================
+
+      THEMING OF THE BOOTSTRAP COMPONENTS
+
+   =========================================
+
+    1 - NAVBAR
+    2 - BUTTONS
+    3 - TYPE
+    4 - PAGINATION
+    5 - UTILITIES
+    6 - FORMS
+    7 - CODE
+    8 - NAV
+    9 - CARD
+    10 - DROPDOWNS
+
+*/
+
+/*
+ * 1. NAVBAR
+ */
+
+.navbar {
+    padding: $navbar-padding-y $navbar-padding-x;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: $navbar-brand-padding-y;
+    padding-bottom: $navbar-brand-padding-y;
+    margin-right: $navbar-padding-x;
+    font-size: $navbar-brand-font-size;
+}
+
+.navbar-toggler {
+    padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+    font-size: $navbar-toggler-font-size;
+    line-height: 1;
+    border: $border-width solid transparent; // remove default button style
+    @include border-radius($navbar-toggler-border-radius);
+}
+
+// Dark links against a light background
+.navbar-light {
+    .navbar-brand {
+        color: $navbar-light-active-color;
+        @include hover-focus {
+            color: $navbar-light-active-color;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $navbar-light-color;
+            @include hover-focus {
+                color: $navbar-light-hover-color;
+            }
+            &.disabled {
+                color: $navbar-light-disabled-color;
+            }
+        }
+        .show>.nav-link,
+        .active>.nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            color: $navbar-light-active-color;
+        }
+    }
+    .navbar-toggler {
+        color: $navbar-light-color;
+        border-color: $navbar-light-toggler-border-color;
+    }
+    .navbar-toggler-icon {
+        background-image: $navbar-light-toggler-icon-bg;
+    }
+    .navbar-text {
+        color: $navbar-light-color;
+    }
+}
+
+// White links against a dark background
+.navbar-dark {
+    .navbar-brand {
+        color: $navbar-dark-active-color;
+        @include hover-focus {
+            color: $navbar-dark-active-color;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $navbar-dark-color;
+            @include hover-focus {
+                color: $navbar-dark-hover-color;
+            }
+            &.disabled {
+                color: $navbar-dark-disabled-color;
+            }
+        }
+        .show>.nav-link,
+        .active>.nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            color: $navbar-dark-active-color;
+        }
+    }
+    .navbar-toggler {
+        color: $navbar-dark-color;
+        border-color: $navbar-dark-toggler-border-color;
+    }
+    .navbar-toggler-icon {
+        background-image: $navbar-dark-toggler-icon-bg;
+    }
+    .navbar-text {
+        color: $navbar-dark-color;
+    }
+}
+
+/*
+ * 2. BUTTONS
+ */
+
+.btn {
+    font-weight: $btn-font-weight;
+    border: $btn-border-width solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    @include button-size($btn-padding-y, $btn-padding-x, $font-size-base * 0.9, $btn-line-height, $btn-border-radius);
+    @include transition($btn-transition);
+    &:focus,
+    &.focus {
+        box-shadow: $btn-focus-box-shadow;
+    }
+    &.disabled,
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+        @include box-shadow(none);
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-image: none;
+        @include box-shadow($btn-active-box-shadow);
+        &:focus {
+            @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+        }
+    }
+}
+
+// Make a button look and behave like a link
+.btn-link {
+    font-weight: $font-weight-normal;
+    color: $link-color;
+    @include hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+    &:focus,
+    &.focus {
+        text-decoration: $link-hover-decoration;
+    }
+    &:disabled,
+    &.disabled {
+        color: $btn-link-disabled-color;
+    }
+}
+
+//
+// Alternate buttons
+//
+@each $color,
+$value in $theme-colors {
+    .btn-#{$color} {
+        @include button-variant($value, $value);
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .btn-outline-#{$color} {
+        @include button-outline-variant($value, $white);
+    }
+}
+
+.btn-outline-light {
+    &:hover, &:focus {
+        color: $brand-primary;
+    }
+}
+
+//
+// Button Sizes
+//
+.btn-lg {
+    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg * 0.9, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+/*
+ * 3. TYPE
+ */
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    line-height: $line-height-base;
+    color: $body-color;
+    background-color: $body-bg;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    @include hover-focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+}
+
+//
+// Headings
+//
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: $headings-margin-bottom;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+}
+
+h1,
+.h1 {
+    font-size: $h1-font-size;
+}
+
+h2,
+.h2 {
+    font-size: $h2-font-size;
+}
+
+h3,
+.h3 {
+    font-size: $h3-font-size;
+}
+
+h4,
+.h4 {
+    font-size: $h4-font-size;
+}
+
+h5,
+.h5 {
+    font-size: $h5-font-size;
+}
+
+h6,
+.h6 {
+    font-size: $h6-font-size;
+}
+
+.lead {
+    font-size: $lead-font-size;
+    font-weight: $lead-font-weight;
+}
+
+// Type display classes
+.display-1 {
+    font-size: $display1-size;
+    font-weight: $display1-weight;
+    line-height: $display-line-height;
+}
+
+.display-2 {
+    font-size: $display2-size;
+    font-weight: $display2-weight;
+    line-height: $display-line-height;
+}
+
+.display-3 {
+    font-size: $display3-size;
+    font-weight: $display3-weight;
+    line-height: $display-line-height;
+}
+
+.display-4 {
+    font-size: $display4-size;
+    font-weight: $display4-weight;
+    line-height: $display-line-height;
+}
+
+//
+// Horizontal rules
+//
+hr {
+    border-top: $hr-border-width solid $hr-border-color;
+}
+
+//
+// Emphasis
+//
+small,
+.small {
+    font-size: $small-font-size;
+    font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+    padding: $mark-padding;
+    background-color: $mark-bg;
+}
+
+// Blockquotes
+.blockquote {
+    padding: ($spacer / 2) $spacer;
+    margin-bottom: $spacer * 2;
+    font-size: $blockquote-font-size;
+    border-left: 5px solid theme-color();
+}
+
+.blockquote-footer {
+    color: $blockquote-small-color;
+    &::before {
+        content: "\2014 \00A0"; // em dash, nbsp
+    }
+}
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+/*
+ * 4. PAGINATION
+ */
+
+.page-item {
+    &:first-child {
+        .page-link {
+            @include border-left-radius($border-radius);
+        }
+    }
+    &:last-child {
+        .page-link {
+            @include border-right-radius($border-radius);
+        }
+    }
+    &.active .page-link {
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border-color;
+    }
+    &.disabled .page-link {
+        color: $pagination-disabled-color;
+        background-color: $pagination-disabled-bg;
+        border-color: $pagination-disabled-border-color;
+    }
+}
+
+.page-link {
+    padding: $pagination-padding-y $pagination-padding-x;
+    line-height: $pagination-line-height;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+
+    &:hover {
+        z-index: 2;
+        color: $pagination-hover-color;
+        text-decoration: none;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border-color;
+      }
+
+      &:focus {
+        z-index: 2;
+        outline: $pagination-focus-outline;
+        box-shadow: $pagination-focus-box-shadow;
+      }
+}
+
+//
+// Sizing
+//
+.pagination-lg {
+    @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+}
+
+.pagination-sm {
+    @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+}
+
+/*
+* 5. UTILITIES
+*/
+
+@each $color,
+$value in $theme-colors {
+    @include bg-variant('.bg-#{$color}', $value);
+}
+
+@each $color,
+$value in $theme-colors {
+    .border-#{$color} {
+        border-color: $value !important;
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    @include text-emphasis-variant('.text-#{$color}', $value);
+}
+
+@each $color,
+$value in $theme-colors {
+    .badge-#{$color} {
+        @include badge-variant($value);
+    }
+}
+
+.shadow-sm { box-shadow: $box-shadow-sm !important; }
+.shadow { box-shadow: $box-shadow !important; }
+.shadow-lg { box-shadow: $box-shadow-lg !important; }
+
+/*
+  * 6. FORMS
+  */
+
+.form-control {
+    padding: $input-padding-y $input-padding-x;
+    font-size: $font-size-base;
+    line-height: $input-line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    border: $input-border-width solid $input-border-color;
+    @if $enable-rounded {
+        border-radius: $input-border-radius;
+    }
+    @else {
+        border-radius: 0;
+    }
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+    @include form-control-focus(); // Placeholder
+    &::placeholder {
+        color: $input-placeholder-color;
+        font-weight: 300;
+    }
+    &:disabled,
+    &[readonly] {
+        background-color: $input-disabled-bg;
+    }
+}
+
+select.form-control {
+    &:not([size]):not([multiple]) {
+        height: $input-height;
+    }
+    &:focus::-ms-value {
+        color: $input-color;
+        background-color: $input-bg;
+    }
+}
+
+.form-control-sm {
+    padding: $input-padding-y-sm $input-padding-x-sm;
+    font-size: $font-size-sm;
+    line-height: $input-line-height-sm;
+    @include border-radius($input-border-radius-sm);
+}
+
+select.form-control-sm {
+    &:not([size]):not([multiple]) {
+        height: $input-height-sm;
+    }
+}
+
+.form-control-lg {
+    padding: $input-padding-y-lg $input-padding-x-lg;
+    font-size: $font-size-lg;
+    line-height: $input-line-height-lg;
+    @include border-radius($input-border-radius-lg);
+}
+
+select.form-control-lg {
+    &:not([size]):not([multiple]) {
+        height: $input-height-lg;
+    }
+}
+
+@include form-validation-state("valid", $form-feedback-valid-color);
+@include form-validation-state("invalid", $form-feedback-invalid-color); // Inline forms
+.custom-control-input {
+    &:checked~.custom-control-label::before {
+        color: $custom-control-indicator-checked-color;
+        @include gradient-bg($custom-control-indicator-checked-bg);
+        @include box-shadow($custom-control-indicator-checked-box-shadow);
+    }
+    &:focus~.custom-control-label::before {
+        box-shadow: $custom-control-indicator-focus-box-shadow;
+    }
+    &:active~.custom-control-label::before {
+        color: $custom-control-indicator-active-color;
+        background-color: $custom-control-indicator-active-bg;
+        @include box-shadow($custom-control-indicator-active-box-shadow);
+    }
+    &:disabled {
+        ~.custom-control-label {
+            color: $custom-control-label-disabled-color;
+            &::before {
+                background-color: $custom-control-indicator-disabled-bg;
+            }
+        }
+    }
+}
+
+.custom-checkbox {
+    .custom-control-label::before {
+        @include border-radius($custom-checkbox-indicator-border-radius);
+    }
+    .custom-control-input:checked~.custom-control-label {
+        &::before {
+            @include gradient-bg($custom-control-indicator-checked-bg);
+        }
+        &::after {
+            background-image: $custom-checkbox-indicator-icon-checked;
+        }
+    }
+    .custom-control-input:indeterminate~.custom-control-label {
+        &::before {
+            @include gradient-bg($custom-checkbox-indicator-indeterminate-bg);
+            @include box-shadow($custom-checkbox-indicator-indeterminate-box-shadow);
+        }
+        &::after {
+            background-image: $custom-checkbox-indicator-icon-indeterminate;
+        }
+    }
+    .custom-control-input:disabled {
+        &:checked~.custom-control-label::before {
+            background-color: $custom-control-indicator-checked-disabled-bg;
+        }
+        &:indeterminate~.custom-control-label::before {
+            background-color: $custom-control-indicator-checked-disabled-bg;
+        }
+    }
+}
+
+.custom-radio {
+    .custom-control-label::before {
+        border-radius: $custom-radio-indicator-border-radius;
+    }
+    .custom-control-input:checked~.custom-control-label {
+        &::before {
+            @include gradient-bg($custom-control-indicator-checked-bg);
+        }
+        &::after {
+            background-image: $custom-radio-indicator-icon-checked;
+        }
+    }
+    .custom-control-input:disabled {
+        &:checked~.custom-control-label::before {
+            background-color: $custom-control-indicator-checked-disabled-bg;
+        }
+    }
+}
+
+.input-group-text {
+    @include border-radius($input-border-radius); 
+}
+
+/*
+* 7.CODE
+*/
+
+code {
+    font-size: $code-font-size;
+    color: $code-color;
+}
+
+/*
+* 8. NAV
+*/
+
+.nav-link {
+    padding: $nav-link-padding-y $nav-link-padding-x;
+    &.disabled {
+        color: $nav-link-disabled-color;
+    }
+}
+
+.nav-tabs {
+    //border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+    .nav-item {
+        margin-bottom: -$nav-tabs-border-width;
+    }
+    .nav-link {
+        border: $nav-tabs-border-width solid transparent;
+        @include border-top-radius($nav-tabs-border-radius);
+        @include hover-focus {
+            border-color: $nav-tabs-link-hover-border-color;
+        }
+        &.disabled {
+            color: $nav-link-disabled-color;
+        }
+    }
+    .nav-link.active,
+    .nav-item.show .nav-link {
+        color: $nav-tabs-link-active-color;
+        background-color: $nav-tabs-link-active-bg; //border-color: $nav-tabs-link-active-border-color;
+    }
+    .dropdown-menu {
+        margin-top: -$nav-tabs-border-width;
+    }
+}
+
+.nav-pills {
+    .nav-link {
+        @include border-radius($nav-pills-border-radius);
+    }
+    .nav-link.active,
+    .show>.nav-link {
+        color: $nav-pills-link-active-color;
+        background-color: $nav-pills-link-active-bg;
+    }
+}
+
+/*
+* 9. CARD
+*/
+
+.card {
+    background-color: $card-bg;
+    border: $card-border-width solid $card-border-color;
+    @include border-radius($card-border-radius);
+    >.list-group:first-child {
+        .list-group-item:first-child {
+            @include border-top-radius($card-border-radius);
+        }
+    }
+    >.list-group:last-child {
+        .list-group-item:last-child {
+            @include border-bottom-radius($card-border-radius);
+        }
+    }
+}
+
+.card-body {
+    padding: $card-spacer-x;
+}
+
+.card-title {
+    margin-bottom: $card-spacer-y;
+}
+
+.card-subtitle {
+    margin-top: -($card-spacer-y / 2);
+}
+
+.card-link {
+    +.card-link {
+        margin-left: $card-spacer-x;
+    }
+} //
+// Optional textual caps
+//
+.card-header {
+    padding: $card-spacer-y $card-spacer-x;
+    background-color: $card-cap-bg;
+    border-bottom: 1px solid $card-border-color;
+    &:first-child {
+        @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+    }
+}
+
+.card-header-transparent {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+}
+
+.card-footer {
+    padding: $card-spacer-y $card-spacer-x;
+    background-color: $gray-100;
+    border-top: 1px solid $card-border-color;
+    &:last-child {
+        @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
+    }
+}
+
+.card-header-tabs {
+    margin-right: -($card-spacer-x / 2);
+    margin-bottom: -$card-spacer-y;
+    margin-left: -($card-spacer-x / 2);
+    border-bottom: 0;
+}
+
+.card-header-pills {
+    margin-right: -($card-spacer-x / 2);
+    margin-left: -($card-spacer-x / 2);
+}
+
+.card-img-overlay {
+    padding: $card-img-overlay-padding;
+}
+
+.card-img-overlay-opacity {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    @include border-radius($card-inner-border-radius);
+} // Card image caps
+.card-img-top {
+    @include border-top-radius($card-inner-border-radius);
+}
+
+.card-img-bottom {
+    @include border-bottom-radius($card-inner-border-radius);
+} // Card deck
+.card-deck {
+    .card {
+        margin-bottom: $card-deck-margin;
+    }
+    @include media-breakpoint-up(sm) {
+        margin-right: -$card-deck-margin;
+        margin-left: -$card-deck-margin;
+        .card {
+            margin-right: $card-deck-margin;
+            margin-left: $card-deck-margin;
+        }
+    }
+}
+
+/*
+* 10. DROPDOWNS
+*/
+
+.dropdown-menu {
+    min-width: $dropdown-min-width;
+    padding: $dropdown-padding-y 0;
+    margin: $dropdown-spacer 0 0; // override default ul
+    font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+    color: $body-color;
+    background-color: $dropdown-bg;
+    border: $dropdown-border-width solid $dropdown-border-color;
+    @include border-radius($dropdown-border-radius);
+    @include box-shadow($dropdown-box-shadow);
+}
+
+.dropdown-item {
+    padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+    font-weight: $font-weight-normal;
+    color: $dropdown-link-color;
+    @include hover-focus {
+        color: $dropdown-link-hover-color;
+        @include gradient-bg($dropdown-link-hover-bg);
+    }
+    &.active,
+    &:active {
+        color: $dropdown-link-active-color;
+        @include gradient-bg($dropdown-link-active-bg);
+    }
+    &.disabled,
+    &:disabled {
+        color: $dropdown-link-disabled-color;
+        @if $enable-gradients {
+            background-image: none;
+        }
+    }
+}

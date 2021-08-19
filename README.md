@@ -69,25 +69,25 @@ Skreper is a web-based scraping application that focuses on Indonesia ecommerce 
 
 <br><br>
 
-> Scrapped Tokopedia page
+> Scraped Tokopedia page
 
 ![06-scrappedTokopedia](pic/06-scrappedTokopedia.JPG)
 
 <br><br>
 
-> Scrapping Nike Indonesia page
+> Scraping Nike Indonesia page
 
 ![07a-scrappingNike](pic/07a-scrappingNike.JPG)
 
 <br><br>
 
-> Scrapping Nike Sales Indonesia page
+> Scraping Nike Sales Indonesia page
 
 ![07b-ScrappingNikeSales](pic/07b-ScrappingNikeSales.JPG)
 
 <br><br>
 
-> Scrapped Nike Sales Indonesia page
+> Scraped Nike Sales Indonesia page
 
 ![08-scrappedNikeSales](pic/08-scrappedNikeSales.JPG)
 

@@ -8,7 +8,7 @@ Photo by [Mark König](https://unsplash.com/@markkoenig) on [Unsplash](https://u
 
 ## Introduction
 
-Skreper is a web-based scraping application that focuses on Indonesia ecommerce sites. The main goal of scraper is to enable everyone to do data extraction for research and study purposes. Currently, there are 2 ecommerce sites available for data extraction on Skreper, Tokopedia and Nike Indonesia; more sites are going to be added in the future.
+Skreper is a web-based scraping application that focuses on Indonesia ecommerce sites. The main goal of Skreper is to enable everyone to do data extraction for research and study purposes. Currently, there are 2 ecommerce sites available for data extraction on Skreper, Tokopedia and Nike Indonesia; more sites are going to be added in the future.
 
 ## Features
 
@@ -33,7 +33,7 @@ Skreper is a web-based scraping application that focuses on Indonesia ecommerce 
 ## Important notes
 
 - Ecommerce websites are prone to changes, please notify me if Skreper is not working, you can reach me out on [discord](https://discordapp.com/users/525654231940857867)
-- replace the data/ credential of the yaml file with your own data.
+- Replace the data/ credential of the yaml file with your own data.
 - Template for Skreper can be found on [Bootstrapious](https://bootstrapious.com/)
 - Skreper is not running asynchronously/ concurrently, if somebody is willing to help me improve this application, please kindly reach me out on [discord](https://discordapp.com/users/525654231940857867), I am looking for someone who has the knowledge/ experience of Flask, Celery, Rabbit MQ, Redis, RQ, and Heroku. 
 

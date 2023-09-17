@@ -113,6 +113,8 @@ Skreper is a web-based scraping application that focuses on Indonesia ecommerce 
 
 ## Profile
 
+© Benedict Laiman 2021
+
 Get in touch with me through:
 
 - [Linkedin](https://www.linkedin.com/in/benedict-laiman-60401319a/)

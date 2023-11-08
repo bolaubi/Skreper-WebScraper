@@ -10,6 +10,8 @@ Photo by [Mark König](https://unsplash.com/@markkoenig) on [Unsplash](https://u
 
 Skreper is a web-based scraping application that focuses on Indonesia ecommerce sites. The main goal of Skreper is to enable everyone to do data extraction for research and study purposes. Currently, there are 2 ecommerce sites available for data extraction on Skreper, Tokopedia and Nike Indonesia; more sites are going to be added in the future.
 
+Assisting in data extraction when no public API is available; Skreper scrapes and compiles the scraped data into CSV format for subsequent analysis or machine learning model development.
+
 ## Features
 
 - Data extraction
